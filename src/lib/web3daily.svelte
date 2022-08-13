@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  // const endpoint = "https://jsonplaceholder.typicode.com/posts";
   const url = "http://db.rebase.network/web3daily/public/posts?_order=-id,-time&_page_size=10&_page=1"
 
   let posts = [];
@@ -10,9 +9,9 @@
   }
 
   onMount(async function () {
-    const response = await fetch(url, {headers: opts});
-    console.log("response.status"  + response.status)
-    const data = await response.json();
+    const resp = await fetch(url, {headers: opts});
+    console.log("resp status"  + resp.status)
+    const data = await resp.json();
     posts = data;
   });
 

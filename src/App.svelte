@@ -36,10 +36,6 @@
       <Jobs />
     </Route>
   </Router>
-
-  <h1>Hello, Bootstrap and svelte!</h1>
-  <button class="btn btn-primary">Primary button</button>
-
 </div>
 
 <style>
