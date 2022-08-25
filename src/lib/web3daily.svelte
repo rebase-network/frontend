@@ -21,18 +21,20 @@
   <title>Rebase Web3Daily</title>
 </svelte:head>
 
-<div class="list-group list-group-checkable d-grid gap-2 border-0 w-auto">
-  <div>
-    <p></p>
-  </div>
-
-  {#each posts as post}
-    <div class="list-group-item rounded-3 py-3">
-      {post.title}
-      <span class="small opacity-50">{post.time}</span>
-      <a class="d-block small opacity-50" href="{post.url}">{post.title}</a>
-      <p>{post.author}：{post.introduce}</p>
+<main class="container">
+  <div class="list-group list-group-checkable d-grid gap-2 border-0 w-auto">
+    <div>
+      <p></p>
     </div>
-  {/each}
 
-</div>
+    {#each posts as post,i}
+      <div class="list-group-item rounded-3 py-3">
+        <lable>{i}</lable>
+        {post.title}
+        <span class="small opacity-50">{post.time}</span>
+        <a target="_blank" class="d-block small opacity-50" href="{post.url}">{post.title}</a>
+        <p>{post.author}：{post.introduce}</p>
+      </div>
+    {/each}
+  </div>
+</main>
