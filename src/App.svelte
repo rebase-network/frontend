@@ -1,9 +1,11 @@
 <script>
+  import svelteLogo from './assets/svelte.svg';
   import { Router, Route, Link } from "svelte-navigator";
 
-  import svelteLogo from './assets/svelte.svg'
-  import Daily from './lib/web3daily.svelte'
-  import Jobs from './lib/jobs.svelte'
+  import Daily from './lib/web3daily.svelte';
+  import Jobs from './lib/jobs.svelte';
+  import DailyView from './views/daily.svelte';
+
 </script>
 <style>
 </style>
@@ -52,5 +54,10 @@
       </div>
     </nav>
   </Router>
+
+  <div>
+    <DailyView />
+  </div>
+
 </div>
 
